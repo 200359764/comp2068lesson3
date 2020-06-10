@@ -7,5 +7,5 @@ module.exports = router => {
 
     router.get('/about', about);
 
-    router.get('/path', contact);
+    router.get('/contact', contact);
 };
