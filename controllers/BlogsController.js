@@ -1,5 +1,6 @@
 const viewPath = 'blogs';
 const Blog = require('../models/blog');
+const User = require('../models/user');
 
 exports.index = async (req, res) => {
   try {
