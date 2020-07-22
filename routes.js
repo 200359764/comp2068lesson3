@@ -4,5 +4,6 @@ const router = require('express').Router();
 (require('./routes/blogs'))(router);
 (require('./routes/users'))(router);
 (require('./routes/sessions'))(router);
+(require('./routes/images'))(router);
 
 module.exports = router;
