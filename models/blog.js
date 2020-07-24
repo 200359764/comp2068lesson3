@@ -8,7 +8,7 @@ const BlogSchema = new mongoose.Schema({
   },
   title: {
     type: String,
-    required: true
+    required: true // This must exist
   },
   content: {
     type: String,
@@ -20,7 +20,10 @@ const BlogSchema = new mongoose.Schema({
     default: 'DRAFT'
   }
 }, {
-  timestamps: true
+  timestamps: true,
+  toJSON: {
+    getters: true
+  }
 });
 
 // Query Helpers

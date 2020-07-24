@@ -33,9 +33,12 @@ const UserSchema = new mongoose.Schema({
   }
 }, {
   timestamps: true,
+  toJSON: {
+    getters: true
+  }
 });
 
-
+// Validation attributes
 UserSchema.virtual('emailConfirmation')
 .get(function () {
   return this._emailConfirmation;
@@ -62,7 +65,7 @@ UserSchema.virtual('passwordConfirmation')
   this._passwordConfirmation = value;
 });
 
-
+// Helper attribute
 UserSchema.virtual('fullname')
 .get(function () {
   return `${this.firstName} ${this.lastName}`;
